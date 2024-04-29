@@ -28,6 +28,7 @@ struct PulsAnimation: View {
                             endRadius: 25
                             )
                         .opacity(0.32))
+                
                     .scaleEffect(animationAmount)
                     .animation(
                         .linear(duration: 6)
