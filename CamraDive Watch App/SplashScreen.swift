@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SplashScreen: View {
-    @State var logo: String = "Logo"
+    @State var logo: String = "Logo2"
     @ObservedObject var viewModel: LottieViewModel = .init()
     
     var body: some View {
@@ -18,9 +18,10 @@ struct SplashScreen: View {
             Image(uiImage: viewModel.image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 200)
+                .frame(width: 250)
                 .onAppear {
-                    self.viewModel.loadAnimationFromFile(filename: logo)
+                    self.viewModel.loadAnimation(url: URL(string: "https://lottie.host/30abc9e7-5511-4bfd-8e4c-9d898514b227/Hge4AklgRD.json")!)
+//                    self.viewModel.loadAnimationFromFile(filename: logo)
             }
         }
         .ignoresSafeArea()

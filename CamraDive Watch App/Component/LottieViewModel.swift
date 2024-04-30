@@ -2,7 +2,7 @@
 //  LottieViewModel.swift
 //  CamraDive
 //
-//  Created by Gilang Kisaragi on 29/04/24.
+//  Created by Gilang Kisaragi on 30/04/24.
 //
 
 import SwiftUI

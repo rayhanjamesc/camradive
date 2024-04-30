@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HeartRateFailed: View {
+    @State private var animationAmount = 1.0
+    
     var body: some View {
         ZStack {
             Image("heartIcon")
@@ -27,11 +29,21 @@ struct HeartRateFailed: View {
                     .foregroundColor(.yellow)
                     .padding(.top, 50)
                     .padding(.leading, 48)
+                    
+            }
+            .scaleEffect(animationAmount)
+            .opacity(2 - animationAmount)
+            .animation(
+                .spring(response: 0.5, dampingFraction: 0.5)
+                .repeatForever(autoreverses: true),
+                value: animationAmount
+            )
+            .onAppear {
+                animationAmount = 0
             }
         }
     }
 }
-
 #Preview {
     HeartRateFailed()
 }

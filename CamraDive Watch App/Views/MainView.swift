@@ -15,6 +15,19 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack {
+                HStack { NavigationLink(destination: Onboarding() .navigationBarBackButtonHidden(true)){
+                    Image(systemName: "book")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32)
+                        .foregroundColor(.gray)
+    
+                    Spacer()
+                    }
+                    
+                }
+                
+                
                 Group {
                     if managerClass.mode == .highscore {
                         Image(systemName: "crown.fill")
@@ -39,7 +52,7 @@ struct MainView: View {
                                         .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.6))
                                         .padding()
                                         .cornerRadius(20)
-                            })
+                                })
                             Button(action: {
                                 managerClass.reset()
                             }, label: {
@@ -62,7 +75,7 @@ struct MainView: View {
                         .foregroundColor(.black)
                         .padding(.bottom, 16)
                 }
-                                
+                
                 HStack {
                     Group {
                         if managerClass.mode == .reset {
@@ -75,7 +88,7 @@ struct MainView: View {
                                         .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.6))
                                         .padding()
                                         .cornerRadius(20)
-                            })
+                                })
                         }
                     }
                     

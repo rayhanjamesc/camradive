@@ -13,10 +13,12 @@ struct CamraDive_Watch_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(managerClass)
-            TimeDataView(stopwatchData: $managerClass.stopwatchData)
-                .environmentObject(managerClass)
+            Onboarding()
+//            HeartRateCheckerPage()
+//            MainView()
+//                .environmentObject(managerClass)
+//            TimeDataView(stopwatchData: $managerClass.stopwatchData)
+//                .environmentObject(managerClass)
         }
     }
 }

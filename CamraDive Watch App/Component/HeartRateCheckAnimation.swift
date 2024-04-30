@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct HeartRateCheckAnimation: View {
-    @State var pulsAnimation: String = "Puls Animation"
+    @State var pulsAnimation: String = "Puls Animation2"
     @ObservedObject var viewModel: LottieViewModel = .init()
     @State private var animationAmount = 1.0
     @State private var isHeartAnimating: Bool = false
     
     var body: some View {
         ZStack {
-            Color(red: 0.98, green: 0.98, blue: 0.95).ignoresSafeArea()
+//            Color(red: 0.98, green: 0.98, blue: 0.95).ignoresSafeArea()
             
             Image(systemName: "heart.fill")
                 .resizable()
@@ -43,14 +43,20 @@ struct HeartRateCheckAnimation: View {
             Image("heartIcon")
                 .symbolEffect(.bounce, options: .speed(10), value: isHeartAnimating)
             
-                Image(uiImage: viewModel.image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 65)
-                    .padding(.top, 32)
-                    .onAppear {
-                        self.viewModel.loadAnimationFromFile(filename: pulsAnimation)
-                }
+            Image("Puls")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 40)
+                .padding(.top, 32)
+            
+//                Image(uiImage: viewModel.image)
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 65)
+//                    .padding(.top, 32)
+//                    .onAppear {
+//                        self.viewModel.loadAnimation(url: URL(string: "https://lottie.host/ef811593-3910-4c13-829c-b8bbb2cff97c/X1cms4sPM6.json")!)
+//                }
             Text("80")
                 .font(.headline)
                 .fontWeight(.regular)
