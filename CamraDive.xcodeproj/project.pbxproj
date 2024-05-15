@@ -94,6 +94,8 @@
 		1397356E2BE0E3490013B10E /* Logo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo2.json; sourceTree = "<group>"; };
 		139735712BE0E8040013B10E /* HeartbeatAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatAnimation.swift; sourceTree = "<group>"; };
 		139735742BE0EDD40013B10E /* TestingAja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAja.swift; sourceTree = "<group>"; };
+		139735772BE275E50013B10E /* CamraDive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CamraDive.entitlements; sourceTree = "<group>"; };
+		139735782BE275EC0013B10E /* CamraDive Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CamraDive Watch App.entitlements"; sourceTree = "<group>"; };
 		1A7162002BDE33EB0050B1DE /* ChartView_Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView_Previews.swift; sourceTree = "<group>"; };
 		1A862C002BD9F84C006E2107 /* CamraDive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamraDive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A862C032BD9F84C006E2107 /* CamraDiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamraDiveApp.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		1A862C022BD9F84C006E2107 /* CamraDive */ = {
 			isa = PBXGroup;
 			children = (
+				139735772BE275E50013B10E /* CamraDive.entitlements */,
 				1A862C2D2BDA1183006E2107 /* Views */,
 				1A862C2E2BDA1190006E2107 /* Classes */,
 				1A862C032BD9F84C006E2107 /* CamraDiveApp.swift */,
@@ -198,6 +201,7 @@
 		1A862C142BD9F84D006E2107 /* CamraDive Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				139735782BE275EC0013B10E /* CamraDive Watch App.entitlements */,
 				1389FBD12BDF58B500F6969A /* Asset */,
 				1389FC052BDF5F6C00F6969A /* Component */,
 				1389FC022BDF5F3300F6969A /* SplashScreen.swift */,
@@ -556,13 +560,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CamraDive Watch App/CamraDive Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CamraDive Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 88D2VWU83D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CamraDive;
+				INFOPLIST_KEY_CFBundleDisplayName = Camrradive;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "to raed data from healthkit";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "to update data to HealthKit";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = personal.CamraDive;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -570,7 +577,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive.watchkitapp.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -586,13 +593,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CamraDive Watch App/CamraDive Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CamraDive Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 88D2VWU83D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CamraDive;
+				INFOPLIST_KEY_CFBundleDisplayName = Camrradive;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "to raed data from healthkit";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "to update data to HealthKit";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = personal.CamraDive;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,7 +610,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive.watchkitapp.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -618,13 +628,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CamraDive/CamraDive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CamraDive/Preview Content\"";
 				DEVELOPMENT_TEAM = 88D2VWU83D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CamraDive;
+				INFOPLIST_KEY_CFBundleDisplayName = Camradive;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -636,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -651,13 +662,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CamraDive/CamraDive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CamraDive/Preview Content\"";
 				DEVELOPMENT_TEAM = 88D2VWU83D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CamraDive;
+				INFOPLIST_KEY_CFBundleDisplayName = Camradive;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -669,7 +681,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.CamraDive.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;

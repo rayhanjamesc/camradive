@@ -14,7 +14,8 @@ struct HeartRateCheckerPage: View {
     @State private var counter:Float = 0
     @State private var isHeartAnimating: Bool = false
     @State var isOn = true
-    
+    @State var heartRateLive: Int = 0
+    @State var storedHeartRate: Int = 0
     
     
     var body: some View {
@@ -41,7 +42,7 @@ struct HeartRateCheckerPage: View {
                         //                            .padding(.trailing)
                     }
                     .padding(.top, 24)
-                    HeartRateCheckAnimation()
+                    HeartRateCheckAnimation(heartRateLive: $heartRateLive)
                         .padding(.top, 24)
                     
                     Spacer()
@@ -63,7 +64,7 @@ struct HeartRateCheckerPage: View {
                 }
                 .ignoresSafeArea()
                 .background(
-                    NavigationLink(destination: HeartRatePassPage().navigationBarBackButtonHidden(true), isActive: $navigateToNextPage) {
+                    NavigationLink(destination: HeartRatePassPage(heartRateLive: storedHeartRate).navigationBarBackButtonHidden(true), isActive: $navigateToNextPage) {
                         EmptyView()
                     }
                 )
@@ -99,6 +100,9 @@ struct HeartRateCheckerPage: View {
                     isOn = true
                     counter += 0.01
                 }
+            }
+            .onDisappear{
+                storedHeartRate = heartRateLive
             }
         }
     }

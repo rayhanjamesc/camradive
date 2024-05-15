@@ -19,14 +19,12 @@ struct MainView: View {
                     Image(systemName: "book")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 32)
+                        .frame(maxWidth: .infinity)
                         .foregroundColor(.gray)
-    
-                    Spacer()
+                        .padding(.trailing, 125)
                     }
-                    
+                    Spacer()
                 }
-                
                 
                 Group {
                     if managerClass.mode == .highscore {
@@ -175,7 +173,12 @@ enum mode {
 
 //Handles logic related to stopwatch
 //REMINDER: DATA IS STILL STORED AS SECONDS INSTEAD OF MINUTES
-class ManagerClass:ObservableObject {
+class ManagerClass:ObservableObject, Equatable {
+    static func == (lhs: ManagerClass, rhs: ManagerClass) -> Bool {
+            return lhs.secondElapsed == rhs.secondElapsed &&
+                lhs.mode == rhs.mode &&
+                lhs.stopwatchData == rhs.stopwatchData
+        }
     @Published var secondElapsed = 0.0
     @Published var mode:mode = .stopped
     //Array to store past times

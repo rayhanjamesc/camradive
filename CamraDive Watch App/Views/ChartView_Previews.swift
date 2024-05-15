@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChartView_Previews: PreviewProvider {
+    @StateObject var managerClass = ManagerClass()
     static var previews: some View {
         ChartView(managerClass: ManagerClass())
     }

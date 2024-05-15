@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HeartRatePassPage: View {
+    var heartRateLive: Int
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -34,7 +36,7 @@ struct HeartRatePassPage: View {
                     }
                     .padding(.top, 24)
                     Spacer()
-                    HeartRateSuccess()
+                    HeartRateSuccess(heartRateLive: heartRateLive)
                     
                     HStack(spacing: 0) {
                         Button(action: {
@@ -71,6 +73,6 @@ struct HeartRatePassPage: View {
     }
 }
 
-#Preview {
-    HeartRatePassPage()
-}
+//#Preview {
+//    HeartRatePassPage()
+//}

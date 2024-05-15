@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HeartRateSuccess: View {
     @State private var isCheckmarkAnimating: Bool = false
+    var heartRateLive: Int = 0
     
     var body: some View {
         ZStack {
@@ -18,7 +19,7 @@ struct HeartRateSuccess: View {
                 .scaledToFit()
                 .frame(width: 74)
             
-            Text("80")
+            Text("\(heartRateLive)")
                 .font(.title)
                 .fontWeight(.medium)
             
